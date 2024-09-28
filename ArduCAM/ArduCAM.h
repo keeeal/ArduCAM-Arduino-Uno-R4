@@ -96,6 +96,7 @@
 	2017/11/27  V4.1.2  by Max      Add support for Feather M0
 	2018/10/15  V4.1.2  by Lee      Add support for NRF52
 	2018/10/15  V4.1.2  by Lee      Add support for TEENSYDUINO
+        2024/09/28  V4.1.3  by Keeeal   Add support for Uno R4 Minima + WIFI
 --------------------------------------*/
 
 #ifndef ArduCAM_H
