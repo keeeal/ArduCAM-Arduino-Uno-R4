@@ -306,6 +306,21 @@
 #define regsize uint32_t
 #endif
 
+#if defined (ARDUINO_UNOR4_MINIMA) || defined (ARDUINO_UNOR4_WIFI)
+#define cbi(reg, bitmask) *reg &= ~bitmask
+#define sbi(reg, bitmask) *reg |= bitmask
+
+#define pulse_high(reg, bitmask) sbi(reg, bitmask); cbi(reg, bitmask);
+#define pulse_low(reg, bitmask) cbi(reg, bitmask); sbi(reg, bitmask);
+
+#define cport(port, data) port &= data
+#define sport(port, data) port |= data
+
+#define fontbyte(x) cfont.font[x]
+#define regtype volatile uint16_t
+#define regsize uint16_t
+#endif
+
 
 /****************************************************/
 /* Sensor related definition 												*/
